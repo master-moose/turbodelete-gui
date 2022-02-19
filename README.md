@@ -1,58 +1,57 @@
+# Turbo Delete GUI 🚀
 
-<p align="center">
-  <img src="https://github.com/XtremeDevX/turbo-delete/blob/master/assets/turbo-delete-icon-transparent-bg.png" />
-</p>
+**Turbo Delete** is a blazing fast, modern file deletion utility for Windows. Built with **Rust** (Tauri) and **React** (TypeScript), it creates a native-feeling experience that allows you to rapidly delete massive directories that Windows Explorer struggles with.
 
-<h1 align="center">Turbo Delete</h1>
-<h4 align="center">A blazing fast alternative to the default Windows delete.</h1>
-<br>
+![Turbo Delete](public/preview.png)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.1-green"> <img src="https://img.shields.io/github/license/XtremeDevX/turbo-delete?color=pink"> <img src="https://img.shields.io/tokei/lines/github/XtremeDevX/turbo-delete?color=white&label=lines%20of%20code"> <img src="https://img.shields.io/github/languages/top/XtremeDevX/turbo-delete?color=%230xfffff"> <img src="https://img.shields.io/github/repo-size/XtremeDevX/turbo-delete?color=orange">
-</p>
-<br>
+## ✨ Features
 
-![Deleting A Folder using Turbo-Delete](https://github.com/XtremeDevX/turbo-delete/blob/master/assets/delete-animation.mp4?raw=true)
+- **⚡ Turbo Mode**: Uses parallel processing to delete thousands of files per second.
+- **🛡️ Protected Deletion**: Automatically takes ownership and strips "Read-Only"/"Hidden" attributes to delete stubborn files (e.g., old Windows installs).
+- **🎨 Modern UI**: Specific dark mode design that matches Windows 11 aesthetics.
+- **📊 Visual Feedback**: Real-time storage usage bars and granular deletion progress modal.
+- **🖱️ Drag Selection**: Intuitive click-and-drag multi-selection.
+- **🔒 Safety First**: Custom confirmation dialogs and "Devices" view to prevent accidental wiping of critical drives.
 
-Turbodelete is a blazing fast alternative to the default Windows delete function.
+## 📥 Installation
 
-> TurboDelete integrates with your context menu as well as the command-line!
+Download the latest installer from the [Releases](https://github.com/master-moose/turbodelete-gui/releases) page.
 
-# :zap: Installation
+## 🛠️ Development
 
-First you'll need to set your execution policy to RemoteSigned if not done so:
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16+)
+- [Rust](https://www.rust-lang.org/) (v1.70+)
+- [Build Tools for Visual Studio](https://visualstudio.microsoft.com/visual-cpp-build-tools/) (C++ workload)
 
-```powershell
-Set-ExecutionPolicy RemoteSigned
-```
+### Setup
 
-<br>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/master-moose/turbodelete-gui.git
+   cd turbo-delete
+   ```
 
-### Install Using Powershell
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Run the following command on your powershell window:
+3. **Run in Development Mode**
+   ```bash
+   npm run tauri dev
+   ```
 
-```powershell
-iwr -useb cdn.xtremedevx.com/turbo-delete/install.ps1 | iex
-```
+4. **Build for Production**
+   ```bash
+   npm run tauri build
+   ```
+   The installer will be generated in `src-tauri/target/release/bundle/nsis/`.
 
-<br>
+## 📜 Credits
 
-## :clap: Supporters
+- Original core concept and deletion logic by [Tejas Ravishankar (suptejas)](https://github.com/suptejas).
 
-[![Stargazers repo roster for @XtremeDevX/turbo-delete](https://reporoster.com/stars/XtremeDevX/turbo-delete)](https://github.com/XtremeDevX/turbo-delete/stargazers)
+## 📄 License
 
-<br>
-
-
-## Authors
-
-[XtremeDevX](https://www.github.com/XtremeDevX) 
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/XtremeDevX/turbo-delete/tags).
-
-## License
-
-This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE.txt) file for details.
